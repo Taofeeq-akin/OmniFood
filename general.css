@@ -14,7 +14,9 @@ form *:focus {
 html {
   font-size: 62.5%;
   overflow-x: hidden;
-  scroll-behavior: smooth;
+
+  /* Dont works on safaria and firefox */
+  /* scroll-behavior: smooth; */
 }
 
 @font-face {

@@ -127,6 +127,8 @@ img:last-child{
 
 .main-nav-link {
     list-style-type: none;
+    text-decoration: none;
+    list-style: none;
 }
 
 .main-nav-link a:link,
