@@ -7,6 +7,7 @@ btnNav.addEventListener("click", function () {
   headerEl.classList.toggle("nav-open");
 });
 
+///////////////////////////////////////////////////////////
 // Smooth scrooling
 const allLinks = document.querySelectorAll("a:link");
 
@@ -25,12 +26,34 @@ allLinks.forEach(function (link) {
 
     if (href !== "#" && href.startsWith("#")) {
       const sectionEl = document.querySelector(href);
-      
+
       sectionEl.scrollIntoView({ behavior: "smooth" });
       headerEl.classList.remove("nav-open");
     }
   });
 });
+
+//////////////////////////////////////////////////
+// Addiing sticky nav
+const sectionHeroEl = document.querySelector(".hero-section");
+const navHeight = headerEl.getBoundingClientRect().height;
+
+const obs = new IntersectionObserver(
+  function (entries) {
+    const ent = entries[0];
+    // console.log(ent);
+
+    if (!ent.isIntersecting) {
+      headerEl.classList.add("sticky");
+    } else headerEl.classList.remove("sticky");
+  },
+  {
+    root: null,
+    threshold: 0,
+    rootMargin: `-${navHeight}px`,
+  }
+);
+obs.observe(sectionHeroEl);
 
 //////////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions
