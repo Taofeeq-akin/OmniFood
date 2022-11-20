@@ -57,7 +57,11 @@
             
         </div>
         <div class="hero-img-box">
-            <img class="hero-img" src="/img/hero.png" alt="hero">
+            <picture>
+                <source srcset="img/hero.webp" type="image/webp"/>
+                <source srcset="img/hero-min.png" type="image/png"/>
+                <img class="hero-img" src="/img/hero-min.png" alt="hero">
+            </picture>
         </div>
         </div>
     </section>
