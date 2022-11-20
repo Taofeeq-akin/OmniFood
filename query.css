@@ -83,7 +83,7 @@
     background-color: transparent;
     cursor: pointer;
     z-index: 100;
-    border: solid #cf711f 0.5rem;
+    border: solid #cf711fb0 0.1rem;
   }
 
   .icon-mobile-nav[name="close-outline"] {
