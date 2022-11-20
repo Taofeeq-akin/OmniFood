@@ -349,18 +349,22 @@
                     <h2 class="heading-secondary">Get your first meal for free!</h2>
                     <p class="cta-text">Healthy, tasty and hassle-free meals are waiting for you. Start eating well today. 
                         You can cancel or pause anytime. And the first meal is on us!</p>
-                        <form action="">
+                        <form  name="sign-up" netlify>
                             <div>
                                 <label for="fullname">Full Name:</label>
-                                <input required type="text" placeholder="first Name others" id="fullname">
+                                <input required type="text" 
+                                name="full-name"
+                                placeholder="first Name others" id="fullname">
                             </div>
                             <div>
                                 <label for="Email">Your Email:</label>
-                                <input required type="emain" placeholder="example@gmail.com" id="email">
+                                <input required type="emain" 
+                                name="email"
+                                placeholder="example@gmail.com" id="email">
                             </div>
                             <div>
                                 <label for="where">Where did you hear about us</label>
-                                <select required name="" id="where">
+                                <select required name="" id="where" name="select-where">
                                     <option value="">Pleasse choose one option</option>
                                     <option value="friends">friends and family</option>
                                     <option value="youTube">YouTube video</option>
